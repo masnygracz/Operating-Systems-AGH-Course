@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/icefr/Collage_prj/SysOpy/Lab1/cmake-build-debug",
-		"source" : "C:/Users/icefr/Collage_prj/SysOpy/Lab1"
+		"build" : "C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab1/cmake-build-debug",
+		"source" : "C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab1"
 	},
 	"version" : 
 	{
