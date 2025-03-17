@@ -10,16 +10,18 @@ int collatz_conjecture(int input) {
     }
 }
 int test_collatz_convergence(int input, int max_iter, int *steps) {
-    int iter = 0;
-    steps[iter++] = input;
+    int steps_amnt = 0;
+    steps[steps_amnt] = input;
 
-    while (iter < max_iter && input != 1) {
+    while (steps_amnt < max_iter && input != 1) {
         input = collatz_conjecture(input);
-        steps[iter++] = input;
+        steps_amnt++;
+        steps[steps_amnt] = input;
     }
 
     if (input == 1) {
-        return iter;
+        steps[steps_amnt++] = 1;
+        return steps_amnt;
     } else {
         return 0;
     }
