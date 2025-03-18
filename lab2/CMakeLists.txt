@@ -3,6 +3,6 @@ project(lab2 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(lab2 SHARED library.c
-        main.c
+add_library(lab2 SHARED src/collatz.c
+        src/main.c
 )

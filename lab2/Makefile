@@ -1,44 +1,43 @@
-# Kompilator i opcje
 CC = gcc
-CFLAGS = -Wall -std=c17 -g -fPIC
-AR = ar
-ARFLAGS = rcs
+CFLAGS = -Wall -Wextra -I./src
+SRC = src/collatz.c
+OBJ = build/collatz.o
+LIB_STATIC = lib/libcollatz.a
+LIB_SHARED = lib/libcollatz.so
+EXEC = bin/collatz_static bin/collatz_shared bin/collatz_dynamic
 
-# Nazwy plików
-LIB_NAME = libcollatz
-SRC = library.c
-OBJ = library.o
-STATIC_LIB = $(LIB_NAME).a
-SHARED_LIB = $(LIB_NAME).so
+all: static shared dynamic
 
-all: $(STATIC_LIB) $(SHARED_LIB)
+static: $(LIB_STATIC) bin/collatz_static
 
-# Kompilacja biblioteki statycznej (.a)
-$(STATIC_LIB): $(OBJ)
-	$(AR) $(ARFLAGS) $(STATIC_LIB) $(OBJ)
+shared: $(LIB_SHARED) bin/collatz_shared
 
-# Kompilacja biblioteki współdzielonej (.so)
-$(SHARED_LIB): $(OBJ)
-	$(CC) -shared -o $(SHARED_LIB) $(OBJ)
+dynamic: $(LIB_SHARED) bin/collatz_dynamic
 
-# Kompilacja pliku object (.o)
-$(OBJ): $(SRC)
-	$(CC) $(CFLAGS) -c $(SRC) -o $(OBJ)
+build:
+	mkdir -p build
+lib:
+	mkdir -p lib
+bin:
+	mkdir -p bin
 
-# Kompilacja programu testowego z biblioteką statyczną
-test_static: main.c $(STATIC_LIB)
-	$(CC) $(CFLAGS) main.c -o test_static $(STATIC_LIB)
+$(OBJ): $(SRC) | build
+	$(CC) $(CFLAGS) -fPIC -c $< -o $@
 
-# Kompilacja programu testowego z biblioteką współdzieloną
-test_shared: main.c $(SHARED_LIB)
-	$(CC) $(CFLAGS) main.c -o test_shared -L. -lcollatz
+$(LIB_STATIC): $(OBJ) | lib
+	ar rcs $@ $<
 
-test_dynamic: main.c $(SHARED_LIB)
-	$(CC) $(CFLAGS) -DDYNAMIC_LOAD main.c -o test_dynamic -ldl -L. -lcollatz
+$(LIB_SHARED): $(SRC) | lib
+	$(CC) -shared -fPIC $< -o $@
 
+bin/collatz_static: src/main.c $(LIB_STATIC) | bin
+	$(CC) $(CFLAGS) $< -o $@ -Llib -lcollatz
 
-# Sprzątanie
+bin/collatz_shared: src/main.c $(LIB_SHARED) | bin
+	$(CC) $(CFLAGS) $< -o $@ -Llib -lcollatz
+
+bin/collatz_dynamic: src/main.c | bin
+	$(CC) $(CFLAGS) -DDYNAMIC_LOADING -o $@ $< -ldl
+
 clean:
-	rm -f *.o $(STATIC_LIB) $(SHARED_LIB) test_static test_shared test_dynamic
-
-.PHONY: $(SHARED_LIB)
+	rm -rf build lib bin
