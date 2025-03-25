@@ -17,9 +17,8 @@ void remove_all_files(const char *path) {
         if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {
             continue;
         }
-        snprintf(filepath,sizeof(filepath), "%s/%s", path, entry->d_name);
+        sprintf(filepath, "%s/%s", path, entry->d_name);
         remove(filepath);
-        printf("Usunalem %s\n", entry->d_name);
     }
     closedir(dir);
 }
@@ -68,7 +67,6 @@ int main(void)
         }
 
         if (strstr(entry->d_name, ".txt") != NULL) {
-            printf("Plik tekstowy: %s\n", entry->d_name);
 
             char filePath[256];
             sprintf(filePath, "%s/%s", src_dir, entry->d_name);
@@ -83,7 +81,7 @@ int main(void)
             remove_extension(filename_without_extension);
 
             char newFilePath[256];
-            snprintf(newFilePath, sizeof(newFilePath), "%s/%s_reversed.txt", dst_dir, filename_without_extension);
+            sprintf(newFilePath,  "%s/%s_reversed.txt", dst_dir, filename_without_extension);
             FILE *newFile = fopen(newFilePath, "w");
             if (newFile == NULL) {
                 perror("Nie mozna utworzyć pliku wynikowego");
@@ -98,6 +96,7 @@ int main(void)
 
                 fprintf(newFile, "%s\n", line);
             }
+            printf("%s converted\n", filename_without_extension);
             fclose(file);
             fclose(newFile);
         }
