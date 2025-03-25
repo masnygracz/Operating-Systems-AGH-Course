@@ -68,28 +68,28 @@ include CMakeFiles/lab3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab3.dir/flags.make
 
-CMakeFiles/lab3.dir/main.c.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/main.c.obj: C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab3/main.c
-CMakeFiles/lab3.dir/main.c.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab3.dir/main.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lab3.dir/main.c.obj -MF CMakeFiles\lab3.dir\main.c.obj.d -o CMakeFiles\lab3.dir\main.c.obj -c C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\main.c
+CMakeFiles/lab3.dir/flipper.c.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/flipper.c.obj: C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab3/flipper.c
+CMakeFiles/lab3.dir/flipper.c.obj: CMakeFiles/lab3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lab3.dir/flipper.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lab3.dir/flipper.c.obj -MF CMakeFiles\lab3.dir\flipper.c.obj.d -o CMakeFiles\lab3.dir\flipper.c.obj -c C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\flipper.c
 
-CMakeFiles/lab3.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/lab3.dir/main.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\main.c > CMakeFiles\lab3.dir\main.c.i
+CMakeFiles/lab3.dir/flipper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/lab3.dir/flipper.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\flipper.c > CMakeFiles\lab3.dir\flipper.c.i
 
-CMakeFiles/lab3.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/lab3.dir/main.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\main.c -o CMakeFiles\lab3.dir\main.c.s
+CMakeFiles/lab3.dir/flipper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/lab3.dir/flipper.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Kubiszon\Studia\Sem4\SysOpy\sysopRepo\lab3\flipper.c -o CMakeFiles\lab3.dir\flipper.c.s
 
 # Object files for target lab3
 lab3_OBJECTS = \
-"CMakeFiles/lab3.dir/main.c.obj"
+"CMakeFiles/lab3.dir/flipper.c.obj"
 
 # External object files for target lab3
 lab3_EXTERNAL_OBJECTS =
 
-lab3.exe: CMakeFiles/lab3.dir/main.c.obj
+lab3.exe: CMakeFiles/lab3.dir/flipper.c.obj
 lab3.exe: CMakeFiles/lab3.dir/build.make
 lab3.exe: CMakeFiles/lab3.dir/linkLibs.rsp
 lab3.exe: CMakeFiles/lab3.dir/objects1.rsp

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lab3.dir/main.c.obj"
-  "CMakeFiles/lab3.dir/main.c.obj.d"
+  "CMakeFiles/lab3.dir/flipper.c.obj"
+  "CMakeFiles/lab3.dir/flipper.c.obj.d"
   "lab3.exe"
   "lab3.exe.manifest"
   "lab3.pdb"

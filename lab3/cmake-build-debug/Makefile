@@ -128,29 +128,29 @@ lab3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/build
 .PHONY : lab3/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+flipper.obj: flipper.c.obj
+.PHONY : flipper.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.c.obj
-.PHONY : main.c.obj
+flipper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/flipper.c.obj
+.PHONY : flipper.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+flipper.i: flipper.c.i
+.PHONY : flipper.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.c.i
-.PHONY : main.c.i
+flipper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/flipper.c.i
+.PHONY : flipper.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+flipper.s: flipper.c.s
+.PHONY : flipper.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.c.s
-.PHONY : main.c.s
+flipper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/flipper.c.s
+.PHONY : flipper.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab3
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... flipper.obj
+	@echo ... flipper.i
+	@echo ... flipper.s
 .PHONY : help
 
 

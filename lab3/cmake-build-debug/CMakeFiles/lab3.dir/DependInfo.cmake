@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab3/main.c" "CMakeFiles/lab3.dir/main.c.obj" "gcc" "CMakeFiles/lab3.dir/main.c.obj.d"
+  "C:/Kubiszon/Studia/Sem4/SysOpy/sysopRepo/lab3/flipper.c" "CMakeFiles/lab3.dir/flipper.c.obj" "gcc" "CMakeFiles/lab3.dir/flipper.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
